@@ -24,7 +24,7 @@ class Register_activity : AppCompatActivity() {
         setContentView(R.layout.activity_register_activity)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
+        btRegistrarService.setOnClickListener { view ->
             register(
                 RegisterParameters(
                     userName = editNome.text.toString(),

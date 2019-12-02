@@ -26,13 +26,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
+        btLogar.setOnClickListener { view ->
 
 
             callLogin(editText2.text.toString(), editText.text.toString(), view)
         }
 
-        btRegister.setOnClickListener { view ->
+        btRegister.setOnClickListener {
 
             val intent = Intent(this@MainActivity, Register_activity::class.java).apply {
                 putExtra(EXTRA_MESSAGE, "deu certo")
@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onResponse(call: Call<Login>, response: Response<Login>) {
                     if (response.isSuccessful) {
                         val intent = Intent(this@MainActivity, Home::class.java).apply {
-                            putExtra(EXTRA_MESSAGE, "deu certo")
+                            putExtra(EXTRA_MESSAGE, response.body()?.id)
                         }
                         startActivity(intent)
                     } else
