@@ -31,6 +31,15 @@ class MainActivity : AppCompatActivity() {
 
             callLogin(editText2.text.toString(), editText.text.toString(), view)
         }
+
+        btRegister.setOnClickListener { view ->
+
+            val intent = Intent(this@MainActivity, Register_activity::class.java).apply {
+                putExtra(EXTRA_MESSAGE, "deu certo")
+            }
+            startActivity(intent)
+        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
