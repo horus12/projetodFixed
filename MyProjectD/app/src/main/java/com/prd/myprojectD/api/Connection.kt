@@ -8,7 +8,7 @@ class Connection {
     fun createConection(): Api? {
 
         val service = Retrofit.Builder()
-            .baseUrl("http://10.0.2.2:8081/")
+            .baseUrl("http://10.0.2.2:8080/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(Api::class.java)

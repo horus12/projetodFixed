@@ -16,9 +16,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".ShowServicesActivity"
+            android:label="@string/title_activity_show_services"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".Register_activity"
             android:label="@string/title_activity_register_activity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Home"
             android:label="@string/title_activity_home"

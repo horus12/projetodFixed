@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Aluguel de Serviços</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_home">Aluguel de Serviços</string>
+    <string name="title_activity_home">Serviços disponiveis para contratar</string>
     <string name="title_activity_register_activity">Registrar Novo Usuário</string>
+    <string name="title_activity_show_services">ShowServicesActivity</string>
 </resources>

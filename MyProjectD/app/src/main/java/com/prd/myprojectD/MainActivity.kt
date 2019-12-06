@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onResponse(call: Call<Login>, response: Response<Login>) {
                     if (response.isSuccessful) {
                         val intent = Intent(this@MainActivity, Home::class.java).apply {
-                            putExtra(EXTRA_MESSAGE, response.body()?.id)
+                            putExtra("CPF", response.body()?.id)
                         }
                         startActivity(intent)
                     } else
