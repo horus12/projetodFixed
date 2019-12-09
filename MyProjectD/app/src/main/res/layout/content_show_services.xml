@@ -8,4 +8,16 @@
     tools:context=".ShowServicesActivity"
     tools:showIn="@layout/activity_show_services">
 
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvServicesHistory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:focusableInTouchMode="false"
+        android:visibility="visible"
+        tools:listitem="@layout/recicle_card_aluguel" />
 </androidx.constraintlayout.widget.ConstraintLayout>

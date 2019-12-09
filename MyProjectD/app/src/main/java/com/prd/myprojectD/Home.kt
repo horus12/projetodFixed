@@ -1,7 +1,9 @@
 package com.prd.myprojectD
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.provider.AlarmClock
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -35,6 +37,13 @@ class Home : AppCompatActivity(), ServicesAdapter.OnStoreListener {
         rvServices.layoutManager = LinearLayoutManager(this)
 
         fillRecicle(parentLayout)
+        val id = intent.getStringExtra("CPF")
+        btHistorico.setOnClickListener {
+            val intent = Intent(this@Home, ShowServicesActivity::class.java).apply {
+                putExtra("CPF", id)
+            }
+            startActivity(intent)
+        }
 
     }
 

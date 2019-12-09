@@ -9,15 +9,20 @@ import retrofit2.http.Path
 
 interface Api {
     @POST("Login")
-    fun login(@Body body : LoginParameters): Call<Login>
+    fun login(@Body body: LoginParameters): Call<Login>
 
     @POST("user")
-    fun register(@Body body : RegisterParameters): Call<Void>
+    fun register(@Body body: RegisterParameters): Call<Void>
 
     @GET("service")
     fun getAllServices(): Call<List<ServiceResponses>>
 
     @POST("service/{userCpf}")
-    fun askService(@Path("userCpf") cpf: String,
-                   @Body body:askServiceParameters): Call<Void>
+    fun askService(
+        @Path("userCpf") cpf: String,
+        @Body body: askServiceParameters
+    ): Call<Void>
+
+    @GET("service/user/{userCpf}")
+    fun getHistory(@Path("userCpf") cpf: String): Call <List<ServiceHistory>>
 }

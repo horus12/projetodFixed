@@ -17,7 +17,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".ShowServicesActivity"
-            android:label="@string/title_activity_show_services"
+            android:label="@string/serviceSHOW"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".Register_activity"

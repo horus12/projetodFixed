@@ -1,3 +1,3 @@
 package com.prd.myprojectD.data
 
-data class Login(val id: String, val role: String)
+data class Login(val cpf: String, val role: String)
